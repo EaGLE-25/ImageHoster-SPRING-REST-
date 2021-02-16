@@ -13,7 +13,7 @@ import javax.validation.constraints.*;
  * ErrorResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-02-11T12:27:09.904+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-02-14T18:07:21.240+05:30")
 
 public class ErrorResponse   {
   @JsonProperty("code")
@@ -21,6 +21,9 @@ public class ErrorResponse   {
 
   @JsonProperty("message")
   private String message = null;
+
+  @JsonProperty("root_cause")
+  private String rootCause = null;
 
   public ErrorResponse code(String code) {
     this.code = code;
@@ -64,9 +67,29 @@ public class ErrorResponse   {
     this.message = message;
   }
 
+  public ErrorResponse rootCause(String rootCause) {
+    this.rootCause = rootCause;
+    return this;
+  }
+
+  /**
+   * Root cause of the Error
+   * @return rootCause
+  **/
+  @ApiModelProperty(value = "Root cause of the Error")
+
+
+  public String getRootCause() {
+    return rootCause;
+  }
+
+  public void setRootCause(String rootCause) {
+    this.rootCause = rootCause;
+  }
+
 
   @Override
-  public boolean equals(Object o) {
+  public boolean equals(java.lang.Object o) {
     if (this == o) {
       return true;
     }
@@ -75,12 +98,13 @@ public class ErrorResponse   {
     }
     ErrorResponse errorResponse = (ErrorResponse) o;
     return Objects.equals(this.code, errorResponse.code) &&
-        Objects.equals(this.message, errorResponse.message);
+        Objects.equals(this.message, errorResponse.message) &&
+        Objects.equals(this.rootCause, errorResponse.rootCause);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code, message);
+    return Objects.hash(code, message, rootCause);
   }
 
   @Override
@@ -90,6 +114,7 @@ public class ErrorResponse   {
     
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    rootCause: ").append(toIndentedString(rootCause)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -98,7 +123,7 @@ public class ErrorResponse   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(Object o) {
+  private String toIndentedString(java.lang.Object o) {
     if (o == null) {
       return "null";
     }

@@ -10,8 +10,11 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.awt.*;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "USERS", schema = "imagehoster")
@@ -61,6 +64,8 @@ public class UserEntity implements Serializable {
     @Size(max = 200)
     private String salt;
 
+    @OneToMany
+    private List<ImageEntity> imageEntityList;
 
     public long getId() {
         return id;
@@ -96,6 +101,14 @@ public class UserEntity implements Serializable {
 
     public String getPassword() {
         return password;
+    }
+
+    public List<ImageEntity> getImageEntityList() {
+        return imageEntityList;
+    }
+
+    public void setImageEntityList(List<ImageEntity> imageEntityList) {
+        this.imageEntityList = imageEntityList;
     }
 
     public void setPassword(String password) {
