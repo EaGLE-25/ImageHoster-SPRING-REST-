@@ -1,5 +1,6 @@
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\controller\ImageUploadController.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\TechnicalApiApplication.java
+C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\com\upgrad\technical\api\model\ImageDetailsResponse.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\com\upgrad\technical\api\model\ErrorResponse.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\com\upgrad\technical\api\model\AuthorizedUserResponse.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\io\swagger\api\ApiException.java
@@ -11,10 +12,12 @@ C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\io\swagger\api\ApiOriginFilter.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\controller\SignupController.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\exception\RestExceptionController.java
+C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\com\upgrad\technical\api\model\UpdateImageRequest.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\io\swagger\configuration\HomeController.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\com\upgrad\technical\api\model\ImageUploadResponse.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\config\SwaggerConfiguration.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\io\swagger\configuration\SwaggerDocumentationConfig.java
+C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\controller\AdminController.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\com\upgrad\technical\api\model\SignupUserRequest.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\src\main\java\com\upgrad\technical\api\controller\AuthenticationController.java
 C:\Users\sai darshan\Downloads\imageHosterBackend\technical-api\target\generated-sources\.\io\swagger\Swagger2SpringBoot.java

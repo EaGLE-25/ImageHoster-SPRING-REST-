@@ -26,6 +26,7 @@ STATUS                                   VARCHAR(26)
 
 @Entity
 @Table(name = "IMAGES", schema = "imagehoster")
+@NamedQuery(name = "getImageById",query = "SELECT i FROM ImageEntity i WHERE i.uuid =:id")
 public class ImageEntity implements Serializable {
 
     //Write the annotation which specifies that id attrribute is a primary key

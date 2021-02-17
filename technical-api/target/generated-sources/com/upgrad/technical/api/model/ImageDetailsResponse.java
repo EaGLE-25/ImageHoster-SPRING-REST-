@@ -10,14 +10,17 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * ImageUploadRequest
+ * ImageDetailsResponse
  */
 @Validated
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-02-17T10:45:13.852+05:30")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2021-02-17T10:45:14.006+05:30")
 
-public class ImageUploadRequest   {
+public class ImageDetailsResponse   {
   @JsonProperty("image")
   private String image = null;
+
+  @JsonProperty("id")
+  private String id = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -25,16 +28,19 @@ public class ImageUploadRequest   {
   @JsonProperty("description")
   private String description = null;
 
-  public ImageUploadRequest image(String image) {
+  @JsonProperty("status")
+  private String status = null;
+
+  public ImageDetailsResponse image(String image) {
     this.image = image;
     return this;
   }
 
   /**
-   * The pic in Base64 format
+   * This is the image in Base64 format
    * @return image
   **/
-  @ApiModelProperty(required = true, value = "The pic in Base64 format")
+  @ApiModelProperty(required = true, value = "This is the image in Base64 format")
   @NotNull
 
 
@@ -46,16 +52,37 @@ public class ImageUploadRequest   {
     this.image = image;
   }
 
-  public ImageUploadRequest name(String name) {
+  public ImageDetailsResponse id(String id) {
+    this.id = id;
+    return this;
+  }
+
+  /**
+   * Unique identifier of the user in a standard UUID format
+   * @return id
+  **/
+  @ApiModelProperty(required = true, value = "Unique identifier of the user in a standard UUID format")
+  @NotNull
+
+
+  public String getId() {
+    return id;
+  }
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+  public ImageDetailsResponse name(String name) {
     this.name = name;
     return this;
   }
 
   /**
-   * The name of the image
+   * Name of the image
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "The name of the image")
+  @ApiModelProperty(required = true, value = "Name of the image")
   @NotNull
 
 
@@ -67,7 +94,7 @@ public class ImageUploadRequest   {
     this.name = name;
   }
 
-  public ImageUploadRequest description(String description) {
+  public ImageDetailsResponse description(String description) {
     this.description = description;
     return this;
   }
@@ -88,6 +115,27 @@ public class ImageUploadRequest   {
     this.description = description;
   }
 
+  public ImageDetailsResponse status(String status) {
+    this.status = status;
+    return this;
+  }
+
+  /**
+   * REGISTERED
+   * @return status
+  **/
+  @ApiModelProperty(required = true, value = "REGISTERED")
+  @NotNull
+
+
+  public String getStatus() {
+    return status;
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -97,25 +145,29 @@ public class ImageUploadRequest   {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ImageUploadRequest imageUploadRequest = (ImageUploadRequest) o;
-    return Objects.equals(this.image, imageUploadRequest.image) &&
-        Objects.equals(this.name, imageUploadRequest.name) &&
-        Objects.equals(this.description, imageUploadRequest.description);
+    ImageDetailsResponse imageDetailsResponse = (ImageDetailsResponse) o;
+    return Objects.equals(this.image, imageDetailsResponse.image) &&
+        Objects.equals(this.id, imageDetailsResponse.id) &&
+        Objects.equals(this.name, imageDetailsResponse.name) &&
+        Objects.equals(this.description, imageDetailsResponse.description) &&
+        Objects.equals(this.status, imageDetailsResponse.status);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(image, name, description);
+    return Objects.hash(image, id, name, description, status);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ImageUploadRequest {\n");
+    sb.append("class ImageDetailsResponse {\n");
     
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }

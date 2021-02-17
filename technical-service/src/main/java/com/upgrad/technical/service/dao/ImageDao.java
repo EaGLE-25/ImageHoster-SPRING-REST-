@@ -21,4 +21,12 @@ public class ImageDao {
         return imageEntity;
     }
 
+    public ImageEntity getImageById(String uuid){
+        try {
+            return entityManager.createNamedQuery("getImageById",ImageEntity.class).setParameter("id",uuid).getSingleResult();
+        }
+        catch (NoResultException nre){
+            return null;
+        }
+    }
 }
